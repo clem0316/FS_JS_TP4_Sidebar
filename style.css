@@ -59,3 +59,31 @@ li:hover {
   background: #292929;
   color: #fcfcfb;
 }
+/* ---------- ci-dessous ce que l'on a ajouté dans l'exercice ----------  */
+
+#side-bar.active {
+  left: 0;
+}
+
+.active span {
+  position: absolute;
+}
+
+.active span:nth-child(1) {
+  opacity: 0;
+}
+/* On fait disparaître le premier bâton du hamburger */
+
+.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+/* Ici on a changé chacun des bâtons 2 et 3 pour les positionner en croix en leur faisant faire une rotation de 45deg, chacun dans un sens différent. */
+
+.active ~ .content {
+  opacity: 0.1;
+}
+/* Ci-dessus, la tilde signifie "si la classe .active existe (donc dan notre cas quand on clique sur notre menu) alors voici les changements de la classe ".content" */
